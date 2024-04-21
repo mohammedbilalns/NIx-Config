@@ -87,7 +87,135 @@
 		};
 
 	};
+# Atuin 
+	programs.atuin = {
+		enable = true;
+		enableZshIntegration = true;
+		settings = {
+		};
+	};
+#neofetch 
+	home.file.".config/neofetch/config.conf".source = ./neofetch.conf;
+#mpv 
+	programs.mpv = {
+		enable  = true;
+		config = {
+			hwdec = "auto";
+			volume = "40";
+			save-position-on-quit = "yes";
+		};
+		bindings = {
+			UP = "add volume 5";
+			DOWN = "add volume -5";
+
+		};
+		scripts = [
+			pkgs.mpvScripts.sponsorblock
+				pkgs.mpvScripts.autoload
+		];
+
+	};
+#wofi 
+	programs.wofi = {
+		enable = true;
+		settings = {
+			width = 600;
+			height = 300;
+			location = "center";
+			show = "drun";
+			prompt = "Search...";
+			filter_rate= 100;
+			allow_markup = true;
+			no_actions = true;
+			halign = "fill";
+			orientation = "vertical";
+			content_halign = "fill";
+			insensitive = true;
+			allow_images = true;
+			image_size = 40;
+			gtk_dark = true;
+			dynamic_lines  = true;
+
+		};
+		style = " window {
+margin: 0px;
+border: 5px solid #000000;
+	background-color: #000000;
+	border-radius: 15px;
+		}
+
+#input {
+padding: 4px;
+margin: 4px;
+	padding-left: 20px;
+border: none;
+color: #cdd6f4;
+       font-weight: bold;
+       background-color: #111111;
+outline: none;
+	 border-radius: 15px;
+margin: 10px;
+	margin-bottom: 2px;
+}
+#input:focus {
+border: 0px solid #1e1e2e;
+	margin-bottom: 0px;
+
+
+#inner-box {
+margin: 4px;
+border: 10px solid #1e1e2e;
+color: #cdd6f4;
+       font-weight: bold;
+       background-color: #1e1e2e;
+       border-radius: 15px;
+}
+
+#outer-box {
+margin: 0px;
+border: none;
+	border-radius: 15px;
+	background-color: #1e1e2e;
+}
+
+#scroll {
+	margin-top: 5px;
+border: none;
+	border-radius: 15px;
+	margin-bottom: 5px;
+	/* background: rgb(255,255,255); */
+}
+
+#img:selected {
+	background-color: #89b4fa;
+	border-radius: 15px;
+}
+
+#text:selected {
+color: #cdd6f4;
+margin: 0px 0px;
+border: none;
+	border-radius: 15px;
+	background-color: #89b4fa;
+}
+
+#entry {
+margin: 0px 0px;
+border: none;
+	border-radius: 15px;
+	background-color: transparent;
+}
+
+#entry:selected {
+margin: 0px 0px;
+border: none;
+	border-radius: 15px;
+	background-color: #89b4fa;
+}";
+
+};
+
 
 # Let Home Manager install and manage itself.
-	programs.home-manager.enable = true;
+programs.home-manager.enable = true;
 }

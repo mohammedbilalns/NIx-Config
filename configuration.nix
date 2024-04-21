@@ -165,6 +165,10 @@
     orchis-theme
     killall
     networkmanagerapplet
+    mpvScripts.sponsorblock
+    mpvScripts.autoload
+    lxqt.lxqt-policykit
+
     
     
   ];
