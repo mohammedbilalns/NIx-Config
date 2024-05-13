@@ -131,7 +131,7 @@
     zathura
     nwg-look
     texliveFull
-    neofetch
+    fastfetch
     htop
     bat
     yazi
@@ -161,13 +161,13 @@
     tree-sitter
     nodejs_21
     cargo
-    foot
     orchis-theme
     killall
     networkmanagerapplet
     mpvScripts.sponsorblock
     mpvScripts.autoload
     lxqt.lxqt-policykit
+    rofi-wayland
 
     
     
